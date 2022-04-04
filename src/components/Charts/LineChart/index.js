@@ -1,13 +1,14 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
-import { Chart as ChartJS } from 'chart.js/auto';
+// import { Chart as ChartJS } from 'chart.js/auto';
 
 const LineChart = (props) => {
 	const { months, borderColor, pointBorderColor } = props.data;
+	/* eslint-disable no-unused-vars */
 	const [userData, setUserData] = useState({
 		labels: months.map((data) => data.month),
-
 		datasets: [
 			{
 				label: '',
@@ -21,6 +22,7 @@ const LineChart = (props) => {
 			},
 		],
 	});
+	/* eslint-enable no-unused-vars */
 
 	const options = {
 		aspectRatio: 4,
